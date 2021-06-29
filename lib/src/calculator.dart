@@ -152,6 +152,7 @@ class InputCalculatorArgs {
   final CalculatorThemes theme;
   final PreferredSizeWidget appBar;
   final Widget aturButton;
+  final bool enabled;
 
   InputCalculatorArgs(
       {this.title,
@@ -167,7 +168,8 @@ class InputCalculatorArgs {
       this.allowNegativeResult = true,
       this.theme = CalculatorThemes.flat,
       this.appBar,
-      this.aturButton});
+      this.aturButton,
+      this.enabled = true});
 }
 
 class Calculator extends StatefulWidget {

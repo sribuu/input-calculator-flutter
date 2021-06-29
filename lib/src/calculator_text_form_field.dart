@@ -28,6 +28,7 @@ class CalculatorTextFormField extends StatefulWidget with BaseTextField {
     this.theme = CalculatorThemes.flat,
     this.appBar,
     this.aturButton,
+    this.enabled,
   }) : super(key: key);
 
   final String title;
@@ -51,6 +52,7 @@ class CalculatorTextFormField extends StatefulWidget with BaseTextField {
   final CalculatorThemes theme;
   final PreferredSizeWidget appBar;
   final Widget aturButton;
+  final bool enabled;
 
   @override
   _CalculatorTextFormFieldState createState() =>
@@ -75,6 +77,7 @@ class _CalculatorTextFormFieldState extends State<CalculatorTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: widget.enabled,
       controller: inputController,
       readOnly: true,
       style: widget.style,

@@ -22,6 +22,7 @@ mixin BaseTextField {
   CalculatorThemes get theme;
   PreferredSizeWidget appBar;
   Widget aturButton;
+  bool enabled;
 
   Future<double> showInputCalculator(BuildContext context) async {
     final args = InputCalculatorArgs(
@@ -39,6 +40,7 @@ mixin BaseTextField {
       theme: theme ?? CalculatorThemes.flat,
       appBar: appBar,
       aturButton: aturButton,
+      enabled: enabled,
     );
 
     final result = await Navigator.of(context).push(
